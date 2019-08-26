@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    tools:context=".DetailMovieActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:id="@+id/img_photo"
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                tools:src="@color/colorAccent"
+                tools:contentDescription="Poster Movie" />
+
+            <!-- tools:text dapat digunakan saat memuat data dinamis untuk preview test-->
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_toEndOf="@id/img_photo"
+                tools:text="Movie Title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_release"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginStart="18dp"
+                android:layout_toEndOf="@id/img_photo"
+                android:paddingTop="8dp"
+                android:text="@string/release"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/tv_release_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_release"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/img_photo"
+                tools:text="Release Date" />
+
+            <TextView
+                android:id="@+id/tv_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_release_value"
+                android:layout_marginStart="18dp"
+                android:layout_toEndOf="@id/img_photo"
+                android:paddingTop="8dp"
+                android:text="@string/genre"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/tv_genre_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_genre"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@id/img_photo"
+                tools:text="Action, Adventure, Crime, Sci-Fi" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_genre_value"
+                android:layout_marginStart="18dp"
+                android:layout_toEndOf="@id/img_photo"
+                android:paddingTop="8dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:text="@string/runtime"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_runtime_value"
+                        android:paddingStart="4dp"
+                        tools:text="1h 57m"/>
+
+                </TableRow>
+            </TableLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="@string/overview"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            tools:text="Description Movie" />
+
+    </LinearLayout>
+</ScrollView>
